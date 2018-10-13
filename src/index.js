@@ -4,6 +4,7 @@ import Header from "./header";
 import Footer from "./footer";
 import "minireset.css";
 import "./styles.css";
+import WorkItem from "./workItem";
 
 const App = () => {
     return (
@@ -22,16 +23,8 @@ const App = () => {
             <section className="section" id="works">
                 <h1 className="section-title">Works セクション タイトル</h1>
                 <ul>
-                    <li className="workItem">
-                        <img className="workItem-image" src="https://dummyimage.com/600x300/eee/ccc"/>
-                        <h3 className="workItem-category">カテゴリー名</h3>
-                        <h3 className="workItem-title">タイトル</h3>
-                    </li>
-                    <li className="workItem">
-                        <img className="workItem-image" src="https://dummyimage.com/600x300/eee/ccc"/>
-                        <h3 className="workItem-category">カテゴリー名</h3>
-                        <h3 className="workItem-title">タイトル</h3>
-                    </li>
+                    <WorkItem title="タイトル1" category="カテゴリー1"/>
+                    <WorkItem title="タイトル2" category="カテゴリー2"/>
                 </ul>
             </section>
 
