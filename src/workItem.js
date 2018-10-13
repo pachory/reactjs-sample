@@ -21,7 +21,6 @@ const Title = styled.h3`
 `;
 
 const WorkItem = props => {
-    console.log(props);
     return (
         <Base>
             <img src="https://dummyimage.com/600x300/eee/ccc" alt={props.title} />

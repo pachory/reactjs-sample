@@ -26,9 +26,8 @@ export default Works;
 
 function makeWorkItems(data) {
     const works = data.works;
-    let result = [];
-    Object.keys(works).forEach((work) => {
-        result.push(<WorkItem key={work} title={works[work].title} category={works[work].category} />);
+    return Object.keys(works).map((key) => {
+        const work = works[key];
+        return <WorkItem key={key} title={work.title} category={work.category} />
     });
-    return result;
 }
