@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import {poppins} from "./styleHelper";
+import {Link} from "react-router-dom";
 
 const Base = styled.header`
     position: absolute;
@@ -14,7 +16,7 @@ const Base = styled.header`
     margin: 0 auto;
     padding: 0 15px;
     color: white;
-    font-family: "Poppins", sans-serif;
+    ${poppins}
 `;
 
 const Title = styled.h1`
@@ -27,7 +29,7 @@ const Nav = styled.nav`
     margin-left: auto;
 `;
 
-const NavItem = styled.a`
+const NavItem = styled(Link)`
     color: white;
     font-size: 15px;
     margin-left: 20px;
@@ -41,8 +43,9 @@ const Header = () => {
         <Base>
             <Title>ヘッダー</Title>
             <Nav>
-                <NavItem href="#about">About</NavItem>
-                <NavItem href="#works">Works</NavItem>
+                <NavItem to="/">About</NavItem>
+                <NavItem to="/">Works</NavItem>
+                <NavItem to="/contact">Contact</NavItem>
             </Nav>
         </Base>
     )
